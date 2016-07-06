@@ -28,6 +28,8 @@ public class FXMLDocumentController implements Initializable {
             Scene scene = new Scene(root);
             
             Stage stage = new Stage();
+            stage.setTitle("Quick Quoter   -Manage Customer-");
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
             

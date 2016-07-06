@@ -11,7 +11,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquoter.controller.CustomerViewController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="637.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquoter.controller.CustomerViewController">
    <children>
       <HBox fx:id="hbTitle" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="83.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
@@ -176,7 +176,7 @@
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefWidth="80.0" text="Clear" textFill="#575757">
+                  <Button mnemonicParsing="false" onAction="#clearTextFields" prefWidth="80.0" text="Clear" textFill="#575757">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
@@ -195,7 +195,7 @@
          <children>
             <HBox spacing="6.0">
                <children>
-                  <TextField opacity="0.6" prefHeight="25.0" prefWidth="211.0" promptText="Search by Id or Name">
+                  <TextField fx:id="txtSearch" opacity="0.6" prefHeight="25.0" prefWidth="211.0" promptText="Search by Id or Name">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
