@@ -1,9 +1,14 @@
 
 package quickquoter.model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class Customer {
     
-     private String CustName;
+    ObservableList<Quote> quoteList = FXCollections.observableArrayList();
+    
+    private String CustName;
    
     private String CustID;
    
@@ -26,7 +31,8 @@ public class Customer {
         
     }
 
-    public Customer(String CustName, String CustID, String ContactName, String Email, String Phone, String Address, String City, String State, String Zip) {
+    public Customer(ObservableList<Quote> quotelist, String CustName, String CustID, String ContactName, String Email, String Phone, String Address, String City, String State, String Zip) {
+        this.quoteList = quotelist;
         this.CustName = CustName;
         this.CustID = CustID;
         this.ContactName = ContactName;

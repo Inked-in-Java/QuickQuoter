@@ -15,7 +15,9 @@ public class QuickQuoter extends Application {
         
         Scene scene = new Scene(root);
         
+        stage.setTitle("Quick Quoter   -Powerful Customer/Quote Manager-");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

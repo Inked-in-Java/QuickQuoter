@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppData>
+    <Config>
+        <Quote>
+            <StartQuoteNumber></StartQuoteNumber>
+            <NextQuoteNumber></NextQuoteNumber>
+            
+        </Quote>
+        <Customer>
+            <CustomerIdStartNumber></CustomerIdStartNumber>
+            <NextCustomerId></NextCustomerId>
+            
+        </Customer>
+    </Config>
+</AppData>

@@ -11,7 +11,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="637.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquoter.controller.CustomerViewController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="680.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquoter.controller.CustomerViewController">
    <children>
       <HBox fx:id="hbTitle" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="83.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
@@ -61,30 +61,30 @@
             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
          </padding>
       </VBox>
-      <GridPane fx:id="gpCustomerFields" layoutX="14.0" layoutY="318.0" prefHeight="284.0" prefWidth="400.0">
+      <GridPane fx:id="gpCustomerFields" layoutX="14.0" layoutY="318.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="108.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.0" minWidth="10.0" prefWidth="292.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="18.0" minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="42.0" minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="4.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="4.0" prefHeight="8.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -96,7 +96,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="txtId" opacity="0.6" promptText="Auto Generated Id" GridPane.columnIndex="1" />
+            <TextField fx:id="txtId" editable="false" minHeight="30.0" onMouseClicked="#generateId" opacity="0.6" promptText="Auto Generated Id" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" />
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="115.0" text="Company Name :" textFill="#575757" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -161,22 +161,22 @@
                   <Insets right="6.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="txtCompanyName" layoutX="118.0" layoutY="9.0" opacity="0.6" promptText="Company Name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtContact" opacity="0.6" promptText="Contact Name" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="txtEmail" opacity="0.6" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="txtPhone" opacity="0.6" promptText="Phone #" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <TextField fx:id="txtAddress" opacity="0.6" promptText="Address" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <TextField fx:id="txtCity" opacity="0.6" promptText="City" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-            <TextField fx:id="txtState" opacity="0.6" promptText="State" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-            <TextField fx:id="txtZipcode" opacity="0.6" promptText="Zipcode" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <TextField fx:id="txtCompanyName" layoutX="118.0" layoutY="9.0" minHeight="30.0" opacity="0.6" promptText="Company Name" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtContact" minHeight="30.0" opacity="0.6" promptText="Contact Name" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtEmail" minHeight="30.0" opacity="0.6" promptText="Email" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtPhone" minHeight="30.0" opacity="0.6" promptText="Phone #" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="txtAddress" minHeight="30.0" opacity="0.6" promptText="Address" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="txtCity" minHeight="30.0" opacity="0.6" promptText="City" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField fx:id="txtState" minHeight="30.0" opacity="0.6" promptText="State" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <TextField fx:id="txtZipcode" minHeight="30.0" opacity="0.6" promptText="Zipcode" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="16" />
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="18">
                <children>
-                  <Button mnemonicParsing="false" prefWidth="80.0" text="Save" textFill="#575757">
+                  <Button mnemonicParsing="false" prefWidth="80.0" style="-fx-background-radius: 6px;" text="Save" textFill="#575757">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#clearTextFields" prefWidth="80.0" text="Clear" textFill="#575757">
+                  <Button mnemonicParsing="false" onAction="#clearTextFields" prefWidth="80.0" style="-fx-background-radius: 6px;" text="Clear" textFill="#575757">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
@@ -188,29 +188,41 @@
             </HBox>
          </children>
       </GridPane>
-      <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="414.0" layoutY="306.0" prefHeight="278.0" prefWidth="365.0" spacing="6.0">
+      <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="414.0" layoutY="306.0" prefHeight="149.0" prefWidth="365.0" spacing="6.0">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="12.0" />
          </padding>
          <children>
-            <HBox spacing="6.0">
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="326.0" spacing="10.0">
                <children>
-                  <TextField fx:id="txtSearch" opacity="0.6" prefHeight="25.0" prefWidth="211.0" promptText="Search by Id or Name">
+                  <TextField fx:id="txtSearch" opacity="0.6" prefHeight="30.0" prefWidth="211.0" promptText="Search by Id or Name">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="60.0" text="Search" textFill="#575757">
+                  <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="60.0" style="-fx-background-radius: 6px;" text="Search" textFill="#575757">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
                   </Button>
                </children>
                <VBox.margin>
-                  <Insets right="50.0" />
+                  <Insets />
                </VBox.margin>
             </HBox>
          </children>
       </VBox>
+      <HBox alignment="BOTTOM_CENTER" layoutX="439.0" layoutY="455.0" prefHeight="207.0" prefWidth="316.0">
+         <padding>
+            <Insets bottom="4.0" left="20.0" right="8.0" top="4.0" />
+         </padding>
+         <children>
+            <Label fx:id="lblMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="276.0" textFill="#6b6b6b">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

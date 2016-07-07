@@ -10,7 +10,7 @@
         <state>NY</state>
         <zipcode>12180</zipcode>
         <quotes>
-            <quote id="001">
+            <quote id="10-001">
                 <title>Tri Fold Flyer</title>
                 <desc>tri fold flyer, 80lb silk text</desc>
                 <duedate>07/29/2016</duedate>
@@ -19,9 +19,9 @@
                 <total>$199.00</total>
                 <status>in process</status>
                 <items>
-                    <item id="002">
-                        <name>80lb silk text, trifold flyer</name>
-                        <desc>trifold flyer, 4/4</desc>
+                    <item id="11-001">
+                        <name>trifold flyer</name>
+                        <desc>trifold flyer, 4/4 - 80lb silk text</desc>
                         <price>$199.00</price>
                         <quantity>2000</quantity>                       
                     </item>                 
