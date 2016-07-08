@@ -252,6 +252,58 @@ public class CustomerViewController implements Initializable {
         return false;
     }
     
+    @FXML
+    private void searchCustomer() {
+          //make sure the customer doesnt already exist.
+         File customerXml = new File("src\\quickquoter\\app_data\\xml\\customers.xml");
+         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+         DocumentBuilder dBuilder;
+         String _name = txtSearch.getText();
+         
+        try {
+            dBuilder = dbFactory.newDocumentBuilder();
+            Document document = dBuilder.parse(customerXml);
+            Element root = document.getDocumentElement();
+            
+            NodeList nodes = root.getElementsByTagName("Customer");
+            //list of [Customer] Nodes
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Node node = nodes.item(i);
+
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element customer = (Element) node;
+                    NodeList childNodes = customer.getChildNodes(); 
+                    for(int x = 0; x < childNodes.getLength(); x++) {
+                        Node custName = childNodes.item(x);
+
+                        if (custName.getNodeType() == Node.ELEMENT_NODE) {
+                            Element c = (Element) custName;
+
+                            if (c.getTextContent().equals(_name)) {  
+                                txtId.setText(childNodes.item(3).getTextContent());
+                                txtCompanyName.setText(childNodes.item(1).getTextContent());
+                                txtContact.setText(childNodes.item(5).getTextContent());
+                                txtEmail.setText(childNodes.item(7).getTextContent());
+                                txtPhone.setText(childNodes.item(9).getTextContent());
+                                txtAddress.setText(childNodes.item(11).getTextContent());
+                                txtCity.setText(childNodes.item(13).getTextContent());
+                                txtState.setText(childNodes.item(15).getTextContent());
+                                txtZipcode.setText(childNodes.item(17).getTextContent());
+                            }
+                            
+                        }
+                    }
+                }
+            }     
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(CustomerViewController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(CustomerViewController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(CustomerViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     private void showAlert(String title, String message, AlertType alerttype) {
         
         Alert alert = new Alert(alerttype);

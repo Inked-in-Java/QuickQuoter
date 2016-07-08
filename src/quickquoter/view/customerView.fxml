@@ -200,7 +200,7 @@
                         <Insets />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="60.0" style="-fx-background-radius: 6px;" text="Search" textFill="#575757">
+                  <Button mnemonicParsing="false" onAction="#searchCustomer" prefHeight="28.0" prefWidth="60.0" style="-fx-background-radius: 6px;" text="Search" textFill="#575757">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
