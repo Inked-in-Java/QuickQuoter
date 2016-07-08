@@ -171,7 +171,7 @@
             <TextField fx:id="txtZipcode" minHeight="30.0" opacity="0.6" promptText="Zipcode" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" GridPane.rowIndex="16" />
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="18">
                <children>
-                  <Button mnemonicParsing="false" prefWidth="80.0" style="-fx-background-radius: 6px;" text="Save" textFill="#575757">
+                  <Button mnemonicParsing="false" onAction="#saveCustomer" prefWidth="80.0" style="-fx-background-radius: 6px;" text="Save" textFill="#575757">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>
