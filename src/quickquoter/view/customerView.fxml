@@ -11,7 +11,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="680.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquoter.controller.CustomerViewController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="680.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #bcbcbc 0%,#848484 100%);; -fx-border-color: #565656; -fx-border-width: 1px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickquoter.controller.CustomerViewController">
    <children>
       <HBox fx:id="hbTitle" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="83.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
@@ -42,7 +42,7 @@
       </HBox>
       <VBox layoutY="73.0" prefHeight="232.0" prefWidth="800.0" AnchorPane.bottomAnchor="332.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="73.0">
          <children>
-            <Label prefHeight="17.0" prefWidth="104.0" text="Customer List" textFill="#575757">
+            <Label prefHeight="17.0" prefWidth="104.0" text="Customer Quotes" textFill="#575757">
                <VBox.margin>
                   <Insets bottom="4.0" left="10.0" />
                </VBox.margin>
@@ -50,12 +50,7 @@
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <TableView prefHeight="184.0" prefWidth="760.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
+            <TableView fx:id="tvQuotes" prefHeight="184.0" prefWidth="760.0" stylesheets="@../themes/default.css" />
          </children>
          <padding>
             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -96,7 +91,10 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="txtId" editable="false" minHeight="30.0" onMouseClicked="#generateId" opacity="0.6" promptText="Auto Generated Id" style="-fx-background-radius: 3px;" GridPane.columnIndex="1" />
+            <TextField fx:id="txtId" editable="false" minHeight="30.0" onMouseClicked="#generateId" opacity="0.6" promptText="Auto Generated Id" style="-fx-background-radius: 3px;" GridPane.columnIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
             <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="115.0" text="Company Name :" textFill="#575757" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="12.0" />

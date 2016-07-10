@@ -1,7 +1,6 @@
 
 package quickquoter.model;
 
-import java.util.Date;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,6 +9,7 @@ public class Quote {
     private ObservableList<Item> itemList = FXCollections.observableArrayList();
     
     private int Id;
+    private int custId;
     private int Quantity;
     private int Status;
     
@@ -17,13 +17,15 @@ public class Quote {
     private String Desc;
     private String Comment;
     private String CreatedBy;
+    private String DueDate;
     
-    private Date DueDate;
+    
     
     private double Total;
 
-    public Quote(ObservableList<Item> itemList, int Id, int Quantity, int Status, String Title, String Desc, String Comment, String CreatedBy, Date DueDate, double Total) {
+    public Quote(ObservableList<Item> itemList, int Id, int custId, int Quantity, int Status, String Title, String Desc, String Comment, String CreatedBy, String DueDate, double Total) {
         this.Id = Id;
+        this.custId = custId;
         this.Quantity = Quantity;
         this.Status = Status;
         this.Title = Title;
@@ -98,11 +100,11 @@ public class Quote {
         this.CreatedBy = CreatedBy;
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
         return DueDate;
     }
 
-    public void setDueDate(Date DueDate) {
+    public void setDueDate(String DueDate) {
         this.DueDate = DueDate;
     }
 
@@ -114,5 +116,12 @@ public class Quote {
         this.Total = Total;
     }
     
+      public int getCustId() {
+        return custId;
+    }
+
+    public void setCustId(int custId) {
+        this.custId = custId;
+    }
     
 }

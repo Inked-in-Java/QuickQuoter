@@ -56,4 +56,21 @@ public class FXMLDocumentController implements Initializable {
         
     }
     
+    @FXML
+    private void loadSettingsView() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/quickquoter/view/settingsView.fxml"));
+            Scene scene = new Scene(root);
+            
+            Stage stage = new Stage();
+            stage.setTitle("Quick Quoter   -Settings-");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 }

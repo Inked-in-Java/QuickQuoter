@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <customer>
+        <startid></startid>
+        <nextid></nextid>
+    </customer>
+    <quote>
+        <startid></startid>
+        <nextid></nextid>
+    </quote>
+    <item>
+        <startid></startid>
+        <nextid></nextid>
+    </item>
+</settings>

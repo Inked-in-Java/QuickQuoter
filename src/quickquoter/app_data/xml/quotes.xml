@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quotes>
+    <quote>
+       <customerid>01888760114</customerid>
+       <quoteid>021002</quoteid>
+       <quantity>12</quantity>
+       <status>2</status>
+       <title>Inked Apparel Quote 01</title>
+       <description>1200 trifold flyers 4/4 - 80lb gloss text 8.5 x 11 , customer pick up</description>
+       <comment>cod , email inked@inkedapparelonline.com when ready</comment>
+       <createdby>house</createdby>
+       <duedate>08/22/2016</duedate>
+       <total>500.00</total>
+    </quote>
+    <quote>
+       <customerid>01888760114</customerid>
+       <quoteid>018002</quoteid>
+       <quantity>100</quantity>
+       <status>2</status>
+       <title>Inked Apparel Quote 02</title>
+       <description>1200 trifold flyers 4/4 - 80lb gloss text 8.5 x 11 , customer pick up</description>
+       <comment>cod , email inked@inkedapparelonline.com when ready</comment>
+       <createdby>house</createdby>
+       <duedate>08/22/2016</duedate>
+       <total>1500.00</total>
+   </quote>
+</quotes>
