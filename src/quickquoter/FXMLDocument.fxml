@@ -21,7 +21,7 @@
                         <Menu mnemonicParsing="false" text="Manage">
                           <items>
                             <MenuItem mnemonicParsing="false" onAction="#loadCustomerView" text="Create/View Customer" />
-                              <MenuItem mnemonicParsing="false" onAction="#loadQuoteView" text="Create/View Quote" />
+                              <MenuItem mnemonicParsing="false" onAction="#loadQuoteView" text="Create  Quote" />
                           </items>
                         </Menu>
                      </items>

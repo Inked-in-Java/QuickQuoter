@@ -64,6 +64,7 @@ public class CustomerViewController implements Initializable {
         // TODO
         //Thread thread = new Thread();
        // thread.run();
+       
         txtId.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -350,21 +351,21 @@ public class CustomerViewController implements Initializable {
                         
                         if (custName.getNodeType() == Node.ELEMENT_NODE) {
                             Element c = (Element) custName;
+                            if (c.getNodeName().equals("CompanyName")) {
+                                 if (c.getTextContent().equals(_name)) {  
+                                    txtId.setText(childNodes.item(3).getTextContent());
+                                    txtCompanyName.setText(childNodes.item(1).getTextContent());
+                                    txtContact.setText(childNodes.item(5).getTextContent());
+                                    txtEmail.setText(childNodes.item(7).getTextContent());
+                                    txtPhone.setText(childNodes.item(9).getTextContent());
+                                    txtAddress.setText(childNodes.item(11).getTextContent());
+                                    txtCity.setText(childNodes.item(13).getTextContent());
+                                    txtState.setText(childNodes.item(15).getTextContent());
+                                    txtZipcode.setText(childNodes.item(17).getTextContent());
 
-                            if (c.getTextContent().equals(_name)) {  
-                                txtId.setText(childNodes.item(3).getTextContent());
-                                txtCompanyName.setText(childNodes.item(1).getTextContent());
-                                txtContact.setText(childNodes.item(5).getTextContent());
-                                txtEmail.setText(childNodes.item(7).getTextContent());
-                                txtPhone.setText(childNodes.item(9).getTextContent());
-                                txtAddress.setText(childNodes.item(11).getTextContent());
-                                txtCity.setText(childNodes.item(13).getTextContent());
-                                txtState.setText(childNodes.item(15).getTextContent());
-                                txtZipcode.setText(childNodes.item(17).getTextContent());
-                                
-                                loadQuotes(childNodes.item(3).getTextContent());
+                                    loadQuotes(childNodes.item(3).getTextContent());
+                                 }
                             }
-                            
                         }
                     }
                 }
