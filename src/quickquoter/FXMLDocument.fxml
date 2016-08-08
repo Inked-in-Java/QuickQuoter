@@ -44,6 +44,11 @@
                   </Menu>
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Report">
+              <items>
+                <MenuItem mnemonicParsing="false" text="View Report" />
+              </items>
+            </Menu>
             <Menu mnemonicParsing="false" text="Settings">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#loadSettingsView" text="Settings" />
